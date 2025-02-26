@@ -1,23 +1,17 @@
 name: Ma première Action
 on: [push]
+
+env: 
+  DAY_OF_WEEK: Monday
+
 jobs:
   Explorer-Actions-Github:
     runs-on: ubuntu-latest
+    env: 
+      Greenting: Hello
     steps:
-    - name: Afficher l'événement déclencheur
-      run: echo "🎉 La tâche a été automatiquement déclenchée par un événement ${{ github.event_name }}."
-    - name: Afficher le système d'exploitation du runner 
-      run: echo "🐧 Cette tâche s'exécute maintenant sur un serveur ${{runner.os }} hébergé par GitHub !"
-    - name: Afficher les informations sur la branche et le dépôt
-      run: echo "🔎 Le nom de votre branche est ${{ github.ref }} et votre dépôt est ${{ github.repository }}."
-    - name: Récupérer le code du dépôt
-      uses: actions/checkout@v4
-    - name: Confirmer le clonage du dépôt
-      run: echo "💡 Le dépôt ${{ github.repository }} a été cloné sur le runner."
-    - name: Informer que le workflow est prêt
-      run: echo "🖥 Le workflow est maintenant prêt à tester votre code sur le runner."
-    - name: Lister les fichiers du dépôt
-      run: |
-        ls ${{ github.workspace }}
-    - name: Afficher le statut de la tâche
-      run: echo "🍏 Le statut de cette tâche est ${{ job.status }}."
+    - name: " Say hello Mona it's Monday "
+      run : echo "$Greeting $First_Name $DAY_OF_WEEK!"
+      env: 
+        First_Name: Mona
+  
