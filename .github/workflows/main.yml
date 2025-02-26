@@ -11,7 +11,7 @@ jobs:
       Greenting: Hello
     steps:
     - name: " Say hello Mona it's Monday "
-      run : echo "$Greeting $First_Name $DAY_OF_WEEK!"
+      run : echo "$Greenting $First_Name $DAY_OF_WEEK!"
       env: 
         First_Name: Mona
   
