@@ -1,4 +1,4 @@
-oname: Ma première Action
+name: Ma première Action
 on: [push]
 
 env: 
