@@ -14,4 +14,6 @@ jobs:
       run : echo "$Greenting $First_Name $DAY_OF_WEEK!"
       env: 
         First_Name: Mona
+    - name: "Say scret"
+      run: ${{secrets.MY_SECRET}}
   
