@@ -1,4 +1,4 @@
-name: Ma première Action
+oname: Ma première Action
 on: [push]
 
 env: 
@@ -15,5 +15,5 @@ jobs:
       env: 
         First_Name: Mona
     - name: "Say scret"
-      run: ${{secrets.MY_SECRET}}
+      run: echo ${{secrets.MY_SECRET}}
   
